@@ -1,0 +1,42 @@
+﻿@model tFX_tool.ViewModel.LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2 style="color:darkred">Login Page</h2>
+<h3 style="color:darkblue">Already registered, login with the form below</h3>
+<div>
+
+    @using (Html.BeginForm("Login", "User"))
+    {
+
+        <div style="color:brown;">@Html.ValidationSummary() </div>
+        <div class="row">
+
+            <!--show details are saved successfully message-->
+            <div class="col-lg-12">@ViewBag.Message</div>
+        </div><br />
+
+        <div class="row">
+            <div class="col-lg-2">@Html.LabelFor(a => a.Username)</div>
+            <div class="col-lg-10">@Html.TextBoxFor(a => a.Username, new { @class = "form-control" }) </div>
+        </div><br />
+
+        <div class="row">
+            <div class="col-lg-2">@Html.LabelFor(a => a.Password)</div>
+            <div class="col-lg-10">@Html.TextBoxFor(a => a.Password, new { @class = "form-control", type = "Password" })</div>
+        </div><br />
+
+        <input type="submit" value="Login" class="btn btn-primary" />
+    }
+
+</div>
+
+@*<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

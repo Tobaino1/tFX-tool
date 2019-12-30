@@ -1,0 +1,26 @@
+﻿@model tFX_tool.Models.User
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Index</h2>
+
+@if (Request.IsAuthenticated)
+{
+    <span>welcome @Html.Encode(User.Identity.Name)</span>
+}
+else
+{
+    <li>@Html.ActionLink("About", "About", "Home")</li> <br />
+
+
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li> <br />
+
+
+    @*@Html.ActionLink("Login", "Login", "User") <br />*@
+
+    @Html.ActionLink("Logout", "", "User")
+
+}
