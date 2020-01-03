@@ -217,6 +217,7 @@
     <Content Include="Views\User\Register.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\SuccessSaveRegistrationDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

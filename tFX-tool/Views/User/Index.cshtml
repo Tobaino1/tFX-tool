@@ -5,8 +5,12 @@
 }
 
 
-<h2>Index</h2>
-
+<div class="jumbotron">
+    <h1>tFX Tool</h1>
+    <p class="lead">tFX tool is a free resource that aids individuals in Forex trading. It curates & gives real time feeds on sentiments / fundamental analysis, 
+    signals from relevant & certified FX experts. It houses an equity table, calculator, standardized formula that can be used for buying & selling in the market.</p>
+    @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+</div>
 @if (Request.IsAuthenticated)
 {
     <span>welcome @Html.Encode(User.Identity.Name)</span>
@@ -16,11 +20,27 @@ else
     <li>@Html.ActionLink("About", "About", "Home")</li> <br />
 
 
-        <li>@Html.ActionLink("Contact", "Contact", "Home")</li> <br />
+    <li>@Html.ActionLink("Contact", "Contact", "Home")</li> <br />
 
+    <li>
 
-    @*@Html.ActionLink("Login", "Login", "User") <br />*@
+        @if (Request.IsAuthenticated)
+        {
 
-    @Html.ActionLink("Logout", "", "User")
+            @Html.ActionLink("Log Out", "Logout", "User")
+        }
+        else
+        {
 
+            @Html.ActionLink("Login", "Login", "User")
+        }
+    </li>    
 }
+    <div class="jumbotron">
+        <h1>tFX Tool</h1>
+        <p class="lead">
+            tFX tool is a free resource that aids individuals in Forex trading. It curates & gives real time feeds on sentiments / fundamental analysis,
+            signals from relevant & certified FX experts. It houses an equity table, calculator, standardized formula that can be used for buying & selling in the market.
+        </p>
+        @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+    </div>

@@ -32,17 +32,18 @@ namespace tFX_tool.Controllers
         [HttpPost]
         public ActionResult SaveRegistrationDetails(User registerUser) // class that has all the ppties/data in the db and the parameter i.e (Registeruser  registeruser) its in d model
         {
-            if (ModelState.IsValid)  //If the model state is valid i.e the form values passed the validation then we are storing d user's details in DB
+            if (ModelState.IsValid)
             {
                 using (tfxConstringWebConfig db = new tfxConstringWebConfig()) //constring to web config set in the model
 
+                //If the model state is valid i.e the form values passed the validation then we are storing d user's details in DB
                 {
                     //save all the details in registeruser object
                     db.Users.Add(registerUser);
                     db.SaveChanges();
                 }
                 ViewBag.Message = "You have successfully register with us, use the login link to continue on the tFX Tool";
-                return View("SuccessSaveRegistrationDetails"); // add this view page for redirect  (successful registration)
+                return View("SuccessSaveRegistrationDetails");
             }
             else
             {
