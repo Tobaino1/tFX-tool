@@ -85,7 +85,7 @@ namespace tFX_tool.Controllers
                 return View(theuser);
             }
         }
-    
+
         //function to check if user is valid or not
         public User IsValidUser(User theuser)
         {
