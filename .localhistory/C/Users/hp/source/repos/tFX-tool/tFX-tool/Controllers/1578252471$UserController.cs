@@ -38,7 +38,7 @@ namespace tFX_tool.Controllers
 
                 {
                     //save all the details in registeruser object
-                    db.Users.Add(registerUser); //Users is used to depic the table name which is User in d DB n registeruser is d object used to save it in d db
+                    db.Users.Add(registerUser); //Users is the table name in d DB n registeruser is d object used to save it in d db
                     db.SaveChanges();
                 }
                 ViewBag.Message = "You have successfully register with us, use the login link to continue on the tFX Tool";

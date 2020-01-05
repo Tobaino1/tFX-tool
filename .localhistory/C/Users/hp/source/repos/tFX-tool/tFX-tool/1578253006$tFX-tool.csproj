@@ -155,24 +155,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\EquityTable.cs">
-      <DependentUpon>TfxtoolsModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TfxtoolsModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TfxtoolsModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TfxtoolsModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TfxtoolsModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TfxtoolsModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TfxtoolsModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\User.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
@@ -199,16 +181,6 @@
       <DependentUpon>DBModel.edmx</DependentUpon>
       <LastGenOutput>DBModel.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\TfxtoolsModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TfxtoolsModel.edmx</DependentUpon>
-      <LastGenOutput>TfxtoolsModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\TfxtoolsModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TfxtoolsModel.edmx</DependentUpon>
-      <LastGenOutput>TfxtoolsModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\DBModel.edmx">
@@ -217,13 +189,6 @@
     </EntityDeploy>
     <Content Include="Models\DBModel.edmx.diagram">
       <DependentUpon>DBModel.edmx</DependentUpon>
-    </Content>
-    <EntityDeploy Include="Models\TfxtoolsModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TfxtoolsModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\TfxtoolsModel.edmx.diagram">
-      <DependentUpon>TfxtoolsModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />

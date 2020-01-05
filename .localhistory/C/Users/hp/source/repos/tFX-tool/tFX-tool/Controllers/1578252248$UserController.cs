@@ -30,7 +30,7 @@ namespace tFX_tool.Controllers
 
         // POST: User/Create
         [HttpPost]
-        public ActionResult SaveRegistrationDetails(User registerUser) // class that has all the ppties/data (eg get set) in the db and the parameter n can be found in model.tt registeruser is the parameter
+        public ActionResult SaveRegistrationDetails(User registerUser) // class that has all the ppties/data (eg get set) in the db and the parameter n can be found in model.tt
         {
             if (ModelState.IsValid)  //If the model state is valid i.e the form values passed the validation then we are storing d user's details in DB
             {
@@ -38,7 +38,7 @@ namespace tFX_tool.Controllers
 
                 {
                     //save all the details in registeruser object
-                    db.Users.Add(registerUser); //Users is used to depic the table name which is User in d DB n registeruser is d object used to save it in d db
+                    db.Users.Add(registerUser); //Users is the table name in d DB n registeruser is d object used to save it in d db
                     db.SaveChanges();
                 }
                 ViewBag.Message = "You have successfully register with us, use the login link to continue on the tFX Tool";

@@ -29,17 +29,13 @@ namespace tFX_tool.Controllers
 
         // POST: Tfxtools/Create
         [HttpPost]
-        public ActionResult Create(EquityTable equity)
+        public ActionResult Create(Equity equity)
         {
             try
             {
                 // TODO: Add insert logic here
-                using (TFXToolswebconfig db = new TFXToolswebconfig())
-                { 
-                    db.EquityTables.Add(equity);
-                    db.SaveChanges();
-                }                         
-            return RedirectToAction("Index");
+                using (TFXtoolswebconfig db = )
+                return RedirectToAction("Index");
             }
             catch
             {

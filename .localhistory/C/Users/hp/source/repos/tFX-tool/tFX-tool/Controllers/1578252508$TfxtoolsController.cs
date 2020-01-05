@@ -35,11 +35,9 @@ namespace tFX_tool.Controllers
             {
                 // TODO: Add insert logic here
                 using (TFXToolswebconfig db = new TFXToolswebconfig())
-                { 
-                    db.EquityTables.Add(equity);
+                    db.EquityTable.Add(equity);
                     db.SaveChanges();
-                }                         
-            return RedirectToAction("Index");
+                    return RedirectToAction("Index");
             }
             catch
             {

@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using tFX_tool.Models;
 
 namespace tFX_tool.Controllers
 {
     public class TfxtoolsController : Controller
     {
         // GET: Tfxtools
-        public ActionResult Index()
+        public ActionResult Equitytable()
         {
             return View();
         }
@@ -29,17 +28,13 @@ namespace tFX_tool.Controllers
 
         // POST: Tfxtools/Create
         [HttpPost]
-        public ActionResult Create(EquityTable equity)
+        public ActionResult Create(FormCollection collection)
         {
             try
             {
                 // TODO: Add insert logic here
-                using (TFXToolswebconfig db = new TFXToolswebconfig())
-                { 
-                    db.EquityTables.Add(equity);
-                    db.SaveChanges();
-                }                         
-            return RedirectToAction("Index");
+
+                return RedirectToAction("Index");
             }
             catch
             {
