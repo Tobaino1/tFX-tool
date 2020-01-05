@@ -7,10 +7,8 @@
 
 <div class="jumbotron">
     <h1>tFX Tool</h1>
-    <p class="lead">
-        tFX tool is a free resource that aids individuals in Forex trading. It curates & gives real time feeds on sentiments / fundamental analysis,
-        signals from relevant & certified FX experts. It houses an equity table, calculator, standardized formula that can be used for buying & selling in the market.
-    </p>
+    <p class="lead">tFX tool is a free resource that aids individuals in Forex trading. It curates & gives real time feeds on sentiments / fundamental analysis, 
+    signals from relevant & certified FX experts. It houses an equity table, calculator, standardized formula that can be used for buying & selling in the market.</p>
     @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
 </div>
 @if (Request.IsAuthenticated)
@@ -36,12 +34,5 @@ else
 
             @Html.ActionLink("Login", "Login", "User")
         }
-    </li>
-    <li>
-        @if (!Request.IsAuthenticated)
-        {
-            @Html.ActionLink("Register", "Register", "User")
-        }
-
-    </li>
+    </li>    
 }
