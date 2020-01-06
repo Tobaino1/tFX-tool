@@ -16,18 +16,9 @@ namespace tFX_tool.Controllers
         }
 
         // GET: Tfxtools/Details/5
-        //public ActionResult Details(int id)
-        //{
-        //    return View();
-        //}
-
-        public ActionResult DetailsAll()
+        public ActionResult Details(int id)
         {
-            using (TFXToolswebconfig db = new TFXToolswebconfig())
-            {
-                return View(db.EquityTables.ToList());
-            }
-
+            return View();
         }
 
         // GET: Tfxtools/Create
