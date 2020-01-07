@@ -259,6 +259,7 @@
     <Content Include="Views\Tfxtools\Index.cshtml" />
     <Content Include="Views\Tfxtools\Details.cshtml" />
     <Content Include="Views\Tfxtools\Delete.cshtml" />
+    <Content Include="Views\Tfxtools\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
