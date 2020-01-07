@@ -23,7 +23,7 @@ namespace tFX_tool.Controllers
         {
             using (TFXToolswebconfig db = new TFXToolswebconfig())
             {
-                return View(db.EquityTables.Where(x => x.Id == id).FirstOrDefault()); ;
+                return View(db.Customers.Where(x => x.CustomerID == id).FirstOrDefault()); ;
             }
 
         }
@@ -66,25 +66,18 @@ namespace tFX_tool.Controllers
         // GET: Tfxtools/Edit/5
         public ActionResult Edit(int id)
         {
-            using (TFXToolswebconfig db = new TFXToolswebconfig())
-            {
-                return View(db.EquityTables.Where(x => x.Id == id).FirstOrDefault()); ;
-            }
+            return View();
         }
 
         // POST: Tfxtools/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, EquityTable equityTable)
+        public ActionResult Edit(int id, FormCollection collection)
         {
             try
             {
                 // TODO: Add update logic here
-                using (TFXToolswebconfig db = new TFXToolswebconfig())
-                {
-                    db.Entry(equityTable).State = System.Data.Entity.EntityState.Modified;
-                    db.SaveChanges();
-                }
-                return RedirectToAction("Index");   
+
+                return RedirectToAction("Index");
             }
             catch
             {
@@ -95,28 +88,19 @@ namespace tFX_tool.Controllers
         // GET: Tfxtools/Delete/5
         public ActionResult Delete(int id)
         {
-            using (TFXToolswebconfig db = new TFXToolswebconfig())
-            {
-                return View(db.EquityTables.Where(x => x.Id == id).FirstOrDefault()); ;
-            }
+            return View();
         }
 
         // POST: Tfxtools/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, EquityTable equityTable)
+        public ActionResult Delete(int id, FormCollection collection)
         {
             try
-                
             {
                 // TODO: Add delete logic here
-                using (TFXToolswebconfig db = new TFXToolswebconfig())
-            { 
-                    equityTable = (db.EquityTables.Where(x => x.Id == id).FirstOrDefault());
-                db.EquityTables.Remove(equityTable);
-                db.SaveChanges();
+
+                return RedirectToAction("Index");
             }
-            return RedirectToAction("Index");
-        }
             catch
             {
                 return View();

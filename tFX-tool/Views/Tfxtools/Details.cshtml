@@ -1,0 +1,50 @@
+﻿@model tFX_tool.Models.EquityTable
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Edit Details pf Equity Table</h2>
+
+<div>
+    <h4>EquityTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EquityORAmountinvested)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquityORAmountinvested)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maxlotsize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maxlotsize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pipvalue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pipvalue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfitORLoss)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfitORLoss)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

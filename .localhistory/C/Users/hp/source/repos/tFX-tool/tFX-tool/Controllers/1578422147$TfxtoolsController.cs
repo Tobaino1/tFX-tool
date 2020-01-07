@@ -106,17 +106,11 @@ namespace tFX_tool.Controllers
         public ActionResult Delete(int id, EquityTable equityTable)
         {
             try
-                
             {
                 // TODO: Add delete logic here
-                using (TFXToolswebconfig db = new TFXToolswebconfig())
-            { 
-                    equityTable = (db.EquityTables.Where(x => x.Id == id).FirstOrDefault());
-                db.EquityTables.Remove(equityTable);
-                db.SaveChanges();
+                equityTable = (db.EquityTables.Where(x => x.Id == id).FirstOrDefault());
+
             }
-            return RedirectToAction("Index");
-        }
             catch
             {
                 return View();

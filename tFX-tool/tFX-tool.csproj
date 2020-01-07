@@ -255,8 +255,10 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\SuccessSaveRegistrationDetails.cshtml" />
     <Content Include="Views\Tfxtools\Create.cshtml" />
-    <Content Include="Views\Tfxtools\Index.cshtml" />
     <Content Include="Views\Tfxtools\DetailsAll.cshtml" />
+    <Content Include="Views\Tfxtools\Index.cshtml" />
+    <Content Include="Views\Tfxtools\Details.cshtml" />
+    <Content Include="Views\Tfxtools\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

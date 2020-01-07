@@ -1,0 +1,41 @@
+﻿@model tFX_tool.Models.User
+
+@{
+                /**/
+
+                ViewBag.Title = "Index";
+}
+
+
+<div class="jumbotron">
+    <h1>tFX Tool</h1>
+    <p class="lead">
+        tFX tool is a free resource that aids individuals in Forex trading. It curates & gives real time feeds on sentiments / fundamental analysis,
+        signals from relevant & certified FX experts. It houses an equity table, calculator, standardized formula that can be used for buying & selling in the market.
+    </p>
+    @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">learn more &raquo;</a></p>*@
+</div>
+<h3 align="center" style="color:brown">tFX Tools Menu link</h3>
+@if (Request.IsAuthenticated)
+{
+    <span>welcome @Html.Encode(User.Identity.Name)</span>
+}
+else
+{
+    <p align="center" style="color:brown"> @Html.ActionLink("tFX Equity Table", "Index", "Tfxtools") || @Html.ActionLink("tFX Calculator", "", "") || @Html.ActionLink("tFX Formula / Theorem", "", "") || @Html.ActionLink("About", "About", "Home") || @Html.ActionLink("Contact", "Contact", "Home")</p>
+
+    @*<li>
+
+        @if (request.isauthenticated)
+        {
+
+            @html.actionlink("log out", "logout", "user")
+        }
+        else
+        {
+
+            @html.actionlink("login", "login", "user")
+        }
+    </li>*@
+
+}
