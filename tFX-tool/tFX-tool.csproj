@@ -260,6 +260,7 @@
     <Content Include="Views\Tfxtools\Details.cshtml" />
     <Content Include="Views\Tfxtools\Delete.cshtml" />
     <Content Include="Views\Tfxtools\Edit.cshtml" />
+    <Content Include="Views\Tfxtools\Theory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

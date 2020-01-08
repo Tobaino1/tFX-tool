@@ -122,10 +122,5 @@ namespace tFX_tool.Controllers
                 return View();
             }
         }
-        //Get: /Theory / formula
-        public ActionResult Theory ()
-        {
-            return View();
-        }
     }
 }
