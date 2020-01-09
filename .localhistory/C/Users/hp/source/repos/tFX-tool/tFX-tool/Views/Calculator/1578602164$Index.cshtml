@@ -1,0 +1,21 @@
+﻿@model tFX_tool.Models.AdditionViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>tFX Calculator</h2>
+<h4 style="color:darkgreen">tFX calculator page gives you the needed insight  for calculating SL (stop loss) & TP (take profit) for your prospective buy or sell trade </h4>
+@using (Html.BeginForm()) {<fieldset> <legend style = "color:blue"> Operation Of Two Numbers </legend>
+    @Html.EditorFor(x => x.A) <br/> <br/> @Html.EditorFor(x => x.B) <br/> <br/> <input type ="submit"
+    value = "add"
+    name = "command"/> <input type = "submit"
+    value = "sub"
+    name = "command"/> <input type = "submit"
+    value = "mul"
+    name = "command"/> <input type = "submit"
+    value = "div"
+    name = "command"/> <br/> <br/> <h2 style ="color:red" > @Html.Label("Result is :")
+    @Html.DisplayFor(x => x.Result) </h2> </fieldset >
+}
+

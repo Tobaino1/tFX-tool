@@ -10,7 +10,7 @@ namespace tFX_tool.Controllers
     public class TfxtoolsController : Controller
     {
         // GET: Tfxtools
-        public ActionResult Index() //controller fxn for admin crud on equity values
+        public ActionResult AdmincrudforEquity() //controller fxn for admin crud for equity
         {
             using (TFXToolswebconfig db = new TFXToolswebconfig())
             {
@@ -55,7 +55,7 @@ namespace tFX_tool.Controllers
                     db.EquityTables.Add(equity);
                     db.SaveChanges();
                 }                         
-            return RedirectToAction("Index");
+            return RedirectToAction("AdmincrudforEquity");
             }
             catch
             {
@@ -84,11 +84,11 @@ namespace tFX_tool.Controllers
                     db.Entry(equityTable).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                 }
-                return RedirectToAction("Index");   
+                return RedirectToAction("AdmincrudforEquity");   
             }
             catch
             {
-                return View();
+                return View("AdmincrudforEquity");
             }
         }
 
@@ -115,7 +115,7 @@ namespace tFX_tool.Controllers
                 db.EquityTables.Remove(equityTable);
                 db.SaveChanges();
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("AdmincrudforEquity");
         }
             catch
             {

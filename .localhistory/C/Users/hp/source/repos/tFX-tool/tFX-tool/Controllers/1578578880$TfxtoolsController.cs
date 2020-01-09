@@ -10,7 +10,7 @@ namespace tFX_tool.Controllers
     public class TfxtoolsController : Controller
     {
         // GET: Tfxtools
-        public ActionResult Index() //controller fxn for admin crud on equity values
+        public ActionResult AdmincrudforEquity() //controller fxn for admin crud for equity
         {
             using (TFXToolswebconfig db = new TFXToolswebconfig())
             {

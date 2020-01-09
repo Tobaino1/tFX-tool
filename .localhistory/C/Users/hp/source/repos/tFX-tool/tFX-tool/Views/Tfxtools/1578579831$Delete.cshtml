@@ -1,0 +1,56 @@
+﻿@model tFX_tool.Models.EquityTable
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>EquityTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EquityORAmountinvested)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquityORAmountinvested)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maxlotsize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maxlotsize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pipvalue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pipvalue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfitORLoss)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfitORLoss)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "AdmincrudforEquity")
+        </div>
+    }
+</div>

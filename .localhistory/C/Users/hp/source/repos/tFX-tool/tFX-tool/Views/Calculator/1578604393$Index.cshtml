@@ -1,0 +1,43 @@
+﻿@model tFX_tool.Models.AdditionViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>tFX Calculator</h2>
+<h4 style="color:darkgreen">tFX calculator page gives you the needed insight  for calculating SL (stop loss) & TP (take profit) for your prospective buy or sell trade </h4>
+
+@using (Html.BeginForm()) {<fieldset> <legend style = "color:blue"> Operation Of Two Numbers </legend>
+    @Html.EditorFor(x => x.A) <br/> <br/> @Html.EditorFor(x => x.B) <br/> <br/> <input type ="submit"
+    value = "add"
+    name = "command"/> <input type = "submit"
+    value = "sub"
+    name = "command"/> <input type = "submit"
+    value = "mul"
+    name = "command"/> <input type = "submit"
+    value = "div"
+    name = "command"/> <br/> <br/> <h2 style ="color:red" > @Html.Label("Result is :")
+    @Html.DisplayFor(x => x.Result) </h2> </fieldset >
+}
+
+
+<p>What is CMP?</p>
+<p>CMP is current market price at which the trade is being offered (for buy (bullish) or sell (bearing)). It is always given automatically by the market</p>
+<p>What is SL?</p>
+<p>SL is STOP LOSS, value (ratio i.e : / percentage i.e %) that will be set for maximum / minimum loss of a trade</p>
+<p>What is TP?</p>
+<p>TP is TAKE PROFIT, value (ratio i.e : / percentage i.e %) that will be set for maximum / minimum profit of a trade</p>
+<h2 style="color:red">NB: For safe trading, use the appropriate max lot size based on your Equity (Amount invested)</h2>
+<h2 style="color:red">For buy scenario</h2>
+<h4>Use the following formula to get your take profit (TP) & stop loss (SL)</h4>
+<h2 style="color:blue">TAKE PROFIT (TP) = CMP + Number of pips</h2>
+<h2 style="color:blue">STOP LOSS (SL) = CMP - Number of pips</h2>
+<h2 style="color:red">
+    Where <br />
+    CMP = (current market price)<br />
+    Number of pips = Is the desired ratio / percentage <br />
+    example
+    <p>If your desired  ratio / percentage for  SL : TP  </p>
+    <p>is 1 : 2  </p>
+    <p>the value will be 30 pips (SL) : 60 pips (TP)  </p>
+</h2>
