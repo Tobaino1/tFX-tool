@@ -1,0 +1,61 @@
+﻿@model tFX_tool.Models.AdditionViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>tFX Calculator</h2>
+<h4 style="color:darkgreen">tFX calculator page gives you the needed insight  for calculating SL (stop loss) & TP (take profit) for your prospective buy or sell trade </h4>
+<h4 style="color:darkgreen"> Scrool down to know what is CMP, SL , TP </h4>
+
+    <p style="color:red">NB: For safe trading, use the appropriate max lot size based on your Equity (Amount invested)</p>
+    <p>Use the following formula to calculate your take profit (TP) & stop loss (SL) for any buy or sell trade</p>
+    <img src="~/Images/BS.png" />
+    <img src="~/Images/SS.png" />
+
+    <div>
+        <h4>how to set ratio / percenatge</h4>
+        <table style="width:100%" color:"blue" border="1">
+            <tr>
+                <th>SL</th>
+                <th>: or %</th>
+                <th>TP</th>
+            </tr>
+            <tr>
+                <td>1  (30 pips) </td>
+                <td>:</td>
+                <td>1 (30 pips)</td>
+            </tr>
+            <tr>
+                <td>1  (30 pips) </td>
+                <td>:</td>
+                <td>2 (60 pips)</td>
+            </tr>
+        </table>
+
+
+        @using (Html.BeginForm())
+        {<fieldset>
+                <legend style="color:blue"> tFX CALCULATOR </legend>
+                @Html.EditorFor(x => x.A) <br /> <br /> @Html.EditorFor(x => x.B) <br /> <br /> <input type="submit"
+                                                                                                       value="add"
+                                                                                                       name="command" /> <input type="submit"
+                                                                                                                                value="sub"
+                                                                                                                                name="command" /> <input type="submit"
+                                                                                                                                                         value="mul"
+                                                                                                                                                         name="command" /> <input type="submit"
+                                                                                                                                                                                  value="div" name="command" /> <br /> <br /> <h2 style="color:red">
+                    @Html.Label("Result is :")
+                    @Html.DisplayFor(x => x.Result)
+                </h2>
+            </fieldset>
+        }
+
+    </div>
+
+    <p>What is CMP?</p>
+    <p>CMP is current market price at which the trade is being offered (for buy (bullish) or sell (bearing)). It is always given automatically by the market</p>
+    <p>What is SL?</p>
+    <p>SL is STOP LOSS, value (ratio i.e : / percentage i.e %) that will be set for maximum / minimum loss of a trade</p>
+    <p>What is TP?</p>
+    <p>TP is TAKE PROFIT, value (ratio i.e : / percentage i.e %) that will be set for maximum / minimum profit of a trade</p>
