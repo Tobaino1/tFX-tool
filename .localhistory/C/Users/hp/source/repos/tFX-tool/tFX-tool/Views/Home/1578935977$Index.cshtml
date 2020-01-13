@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1 style="color:blueviolet" align="center">tFX Tool</h1>
+    <p class="lead">tFX tool is a free resource that aids individuals in Forex trading. It curates & gives real time feeds on sentiments / fundamental analysis, 
+    signals from relevant & certified FX experts. It houses an equity table, calculator, standardized formula that can be used for buying & selling in the market.</p>
+    @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>tFX Equity Table</h2>
+        <p align="justify">
+            Equity table is a  standardized pattern that needs to be adhere to in forex market.
+            It relates the expected maximum lot size to be set based on the Equity (amount
+            you are investing / want to invest), the pip value, the expected profit or loss value.
+        </p>
+        @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>*@
+    </div>
+
+
+    <div class="col-md-4">
+        <h2>tFX Curated Feeds</h2>
+        <p align="justify">tFX tool gives collates real time feeds (signals) from certified FX professionals / firms around the world for buy or sell activity</p>
+        @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>*@
+    </div>
+    <div class="col-md-4">
+        <h2>tFX Fromula / Theorem</h2>
+        <p align="justify">
+            tFX Formula / Theorem is an hybridized computatonal model for predicting the outcome of a  FX trade
+            It serves as a benchmark theory in getting accurate values that will be applied for any trade activity.
+        </p>
+        @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>*@
+    </div>
+    <br />
+    <div class="navbar-collapse collapse">
+        <h4 style="color:lightseagreen">Use the Login or registration link to enjoy more benefits from tFX Tool for Forex activities</h4>
+
+        <ul class="nav navbar-nav">
+            <li>
+                @if (Request.IsAuthenticated)
+                {
+                    @Html.ActionLink("Log Out", "Logout", "User")
+                }
+                else
+                {
+
+                    @Html.ActionLink("Login", "Login", "User")
+                }
+            </li>
+            <li>
+                @if (!Request.IsAuthenticated)
+                {
+                    @Html.ActionLink("Register", "Register", "User")
+                }
+            </li>
+        </ul>
+    </div>
+</div>

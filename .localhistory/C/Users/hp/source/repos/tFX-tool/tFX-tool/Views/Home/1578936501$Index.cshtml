@@ -4,10 +4,8 @@
 
 <div class="jumbotron">
     <h1 style="color:blueviolet" align="center">tFX Tool</h1>
-    <p class="lead" style="color:red">
-        tFX tool is a free resource that aids individuals in Forex trading. It curates & gives real time feeds on sentiments / fundamental analysis,
-        signals from relevant & certified FX experts. It houses an equity table, calculator, standardized formula that can be used for buying & selling in the market.
-    </p>
+    <p class="lead" style="color:red">tFX tool is a free resource that aids individuals in Forex trading. It curates & gives real time feeds on sentiments / fundamental analysis, 
+    signals from relevant & certified FX experts. It houses an equity table, calculator, standardized formula that can be used for buying & selling in the market.</p>
     @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
 </div>
 
@@ -25,7 +23,7 @@
 
     <div class="col-md-4">
         <h2 style="color:red">tFX Curated Feeds</h2>
-        <p align="justify">tFX tool collates real time feeds (signals) from certified FX professionals / firms around the world for buy or sell activity</p>
+        <p align="justify">tFX tool gives collates real time feeds (signals) from certified FX professionals / firms around the world for buy or sell activity</p>
         @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>*@
     </div>
     <div class="col-md-4">
@@ -36,31 +34,28 @@
         </p>
         @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>*@
     </div>
-</div> 
+    <br /><br /><br />
+    <div class="navbar-collapse collapse">
+        <h4 style="color:lightseagreen">Use the Login or registration link to enjoy more benefits from tFX Tool for Forex activities</h4>
 
-<div align="center">
-    <img src="~/Images/tFXtool.Jpg" align="middle" width="200" height="150" />
-    <br /><br />
+        <ul class="nav navbar-nav">
+            <li>
+                @if (Request.IsAuthenticated)
+                {
+                    @Html.ActionLink("Log Out", "Logout", "User")
+                }
+                else
+                {
 
-    <p style="color:cornflowerblue">Use the Login or Registration link to enjoy more benefits from tFX Tool on Forex activities</p>
-
-    <ul align="center">
-        <li>
-            @if (Request.IsAuthenticated)
-            {
-                @Html.ActionLink("Log Out", "Logout", "User")
-            }
-            else
-            {
-
-                @Html.ActionLink("Login", "Login", "User")
-            }
-        </li>
-        <li>
-            @if (!Request.IsAuthenticated)
-            {
-                @Html.ActionLink("Register", "Register", "User")
-            }
-        </li>
-    </ul>
+                    @Html.ActionLink("Login", "Login", "User")
+                }
+            </li>
+            <li>
+                @if (!Request.IsAuthenticated)
+                {
+                    @Html.ActionLink("Register", "Register", "User")
+                }
+            </li>
+        </ul>
+    </div>
 </div>
