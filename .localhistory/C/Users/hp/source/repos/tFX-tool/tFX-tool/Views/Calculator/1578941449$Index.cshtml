@@ -11,25 +11,6 @@
 <img src="~/Images/BS.png" />
 <img src="~/Images/SS.png" />
 <br /><br />
-
-<div align="center">
-    @using (Html.BeginForm())
-    {<fieldset>
-      <legend style="color:blue"> tFX CALCULATOR </legend>
-         @Html.EditorFor(x => x.A) <br /> <br /> @Html.EditorFor(x => x.B) <br /> <br /> 
-    <input type="submit"
-      value="add"
-      name="command" /> <input type="submit"
-      value="sub"
-      name="command" /> <input type="submit"
-      value="mul"
-      name="command" /> <input type="submit"
-                                                                                                                                                                              value="div" name="command" /> <br /> <br /> <h2 style="color:red">
-                @Html.Label("Result is :")
-                @Html.DisplayFor(x => x.Result)
-         </h2>
-        </fieldset>}
-</div>
 <p> Eg if the intended trade is USDJPY and current market price (CMP) is 0.9870</p>
 <p>Use the tfx theory or any technical analysis tools to determine if it's a buy or sell trade</p>
 <p>if it's a buy, since CMP is given at the market as 0.9870 then you apply the appropriate formula above for buy scenario</p>
@@ -46,7 +27,23 @@
 <p>SL =0.9900 </p>
 
 
-
+<div align="center">
+    @using (Html.BeginForm())
+    {<fieldset>
+            <legend style="color:blue"> tFX CALCULATOR </legend>
+            @Html.EditorFor(x => x.A) <br /> <br /> @Html.EditorFor(x => x.B) <br /> <br /> <input type="submit"
+                                                                                                   value="add"
+                                                                                                   name="command" /> <input type="submit"
+                                                                                                                            value="sub"
+                                                                                                                            name="command" /> <input type="submit"
+                                                                                                                                                     value="mul"
+                                                                                                                                                     name="command" /> <input type="submit"
+                                                                                                                                                                              value="div" name="command" /> <br /> <br /> <h2 style="color:red">
+                @Html.Label("Result is :")
+                @Html.DisplayFor(x => x.Result)
+            </h2>
+        </fieldset>}
+</div>
 
 <h4 style="color:darkgreen"> Scrool down to know what is CMP, SL , TP </h4>
 <p style="color:red">NB: For safe trading, use the appropriate max lot size based on your Equity (Amount invested)</p>
