@@ -1,0 +1,124 @@
+﻿@model tFX_tool.Models.AdditionViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>tFX Calculator</h2>
+<h4 style="color:darkgreen">tFX calculator page gives you the needed insight  for calculating SL (stop loss) & TP (take profit) for your prospective buy or sell trade </h4>
+
+<p>Use the following formula to calculate your take profit (TP) & stop loss (SL) for any buy or sell trade</p>
+<img src="~/Images/BS.png" />
+<img src="~/Images/SS.png" />
+<br /><br />
+
+<div align="center">
+    @using (Html.BeginForm())
+    {<fieldset>
+      <legend style="color:blue"> tFX CALCULATOR </legend>
+         @Html.EditorFor(x => x.A) <br /> <br /> @Html.EditorFor(x => x.B) <br /> <br /> 
+    <input type="submit"
+      value="add"
+      name="command" /> <input type="submit"
+      value="sub"
+      name="command" /> <input type="submit"
+      value="mul"
+      name="command" /> <input type="submit"
+                                                                                                                                                                              value="div" name="command" /> <br /> <br /> <h2 style="color:red">
+                @Html.Label("Result is :")
+                @Html.DisplayFor(x => x.Result)
+         </h2>
+        </fieldset>}
+</div>
+<p> Eg if the intended trade is USDJPY and current market price (CMP) is 0.9870</p>
+<p>Use the tfx theory or any technical analysis tools to determine if it's a buy or sell trade</p>
+<p>if it's a buy, since CMP is given at the market as 0.9870 then you apply the appropriate formula above for buy scenario</p>
+<p>Let's assume the ratio to be used as 1:1 i.e 30pips : 30pips for TP & SL</p>
+
+<br /><br />
+<p>TP = CMP - NUMBER OF PIPS    ----FOR TAKE PROFIT</p>
+<p>TP = 0.9870 - 30 pips</p>
+<p>TP = 0.9840</p>
+
+<br /><br />
+<p>SL = CMP + NUMBER OF PIPS  ----- FOR STOP LOSS</p>
+<p>SL = 0.9870 + 30 pips</p>
+<p>SL =0.9900 </p>
+
+
+
+
+<h4 style="color:darkgreen"> Scrool down to know what is CMP, SL , TP </h4>
+<p style="color:red">NB: For safe trading, use the appropriate max lot size based on your Equity (Amount invested)</p>
+
+<div>
+    <h3 align="center" style="color:chocolate">
+        How to set ratio / percenatge</h4>
+        <table style="width:80%" color:"blue" border="0">
+            <tr>
+                <th>SL</th>
+                <th>: or %</th>
+                <th>TP</th>
+            </tr>
+            <tr>
+                <td>1 (30 pips) </td>
+                <td>:</td>
+                <td>1 (30 pips)</td>
+            </tr>
+            <tr>
+                <td>1 (30 pips) </td>
+                <td>:</td>
+                <td>2 (60 pips)</td>
+            </tr>
+            <tr>
+                <td>1 (30 pips) </td>
+                <td>:</td>
+                <td>3 (90 pips)</td>
+            </tr>
+            <tr>
+                <td>2 (60 pips) </td>
+                <td>:</td>
+                <td>1 (30 pips)</td>
+            </tr>
+            <tr>
+                <td>3 (90 pips) </td>
+                <td>:</td>
+                <td>1 (30 pips)</td>
+            </tr>
+        </table>
+
+</div>
+<br />
+<p>What is CMP?</p>
+<p>CMP is current market price at which the trade is being offered (for buy (bullish) or sell (bearing)). It is always given automatically by the market</p>
+<p>What is SL?</p>
+<p>SL is STOP LOSS, value (ratio i.e : / percentage i.e %) that will be set for maximum / minimum loss of a trade</p>
+<p>What is TP?</p>
+<p>TP is TAKE PROFIT, value (ratio i.e : / percentage i.e %) that will be set for maximum / minimum profit of a trade</p>
+<br /><br />
+      <div align="center">
+          <h3 align="center" style="color:chocolate">4 SESSIONS (TRADING TIME) IN THE FOREX MARKET</h3>
+          <table border="0" style="width:80%">
+              <tr>
+                  <th>NAME OF MARKET</th>
+                  <th>TIME / DURATION</th>
+              </tr>
+
+              <tr>
+                  <td>Sydney</td>
+                  <td>10:30 pm - 7:00 am</td>
+              </tr>
+              <tr>
+                  <td>Tokyo</td>
+                  <td>1:00 am - 10:00 am</td>
+              </tr>
+              <tr>
+                  <td>London</td>
+                  <td>8:00 am - 5:00 pm</td>
+              </tr>
+              <tr>
+                  <td>Newyork</td>
+                  <td>1:00 pm - 10:00 pm</td>
+              </tr>
+          </table>
+      </div>
